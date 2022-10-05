@@ -1,0 +1,77 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("vamps hub", "GrapeTheme")
+
+if game.PlaceID == 2788229376 then
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection= Main:NewSection("Main")
+
+
+
+Main:NewToggle("Lock", "makes you have dimag16 aim", function(state)
+    if state then
+        <q></q>=("Toggle On")
+    else
+        <q></q>=("Toggle Off")
+    end
+end)
+
+
+Main:NewButton("Silent aim", "Silent aim makes you have aim", function()
+    print("Clicked")
+end)
+
+
+
+--LOCAL PLAYER
+local Player = window:NewTab("Player")
+local PlayerSection = Player:NewSection("Player")
+
+Main:NewButton("ESP", "Makes you see other players", function()
+    print("Clicked")
+end)
+
+:NewButton("ButtonText", "ButtonInfo", function()
+    print("Clicked")
+end)
+
+PlayerSection:NewSlider("Fly", "Makes you fly like superman", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.Fly = Fly
+end)
+
+PlayerSection:NewSlider("Speed", "makes you speed like flash!", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+--LOCAL TARGET
+local Player = window:NewTab("Target")
+local PlayerSection = Target:NewSection("Target")
+
+Target:NewButton("fling", "makes your target fling!", function()
+    print("Clicked")
+end)
+
+Target:NewButton("auto kill", "when your target spawns you auto tp to them and u have fist and they get auto killed or with a gun!", function()
+    print("Clicked")
+end)
+
+
+--LOCAL NAME
+local Player = window:NewTab("name")
+local NameSection = name:NewSection("Name")
+
+
+NameSection:NewButton("name", "you can put your name to anything example {👑}vamp", function()
+    print("Clicked")
+end)
+
+
+--LOCAL CREDITS
+local Player = window:NewTab("Credits")
+local CreditsSection = credits:NewSection("Credits")
+
+
+CreditsSection:NewLabel("this script was made by vamp if you have any questions then add me on discord bb0#0001")
+end
+end
